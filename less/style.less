@@ -1,0 +1,68 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.resistor {
+  font-size: 2em;
+  > * {
+    margin-right: -.3em;
+    display: inline-block;
+    background-color: hsla(37, 40%, 83%, 1);
+    height: 3em;
+    width: 2em;
+  }
+  .left,
+  .right {
+    border-radius: 10px;
+  }
+  .band {
+    position: relative;
+    width: 1.2em;
+    height: 2.2em;
+    margin-bottom: .4em;
+    &:after {
+      content: ' ';
+      position: absolute;
+      left: .3em;
+      width: 0.5em;
+      height: 2.2em;
+    }
+    &.black:after {
+      background-color: hsl(0, 0%, 0%, 1);
+    }
+    &.brown:after {
+      background-color: hsla(30, 100%, 29%, 1);
+    }
+    &.red:after {
+      background-color: hsla(0, 100%, 50%, 1);
+    }
+    &.orange:after {
+      background-color: hsla(30, 100%, 50%, 1);
+    }
+    &.yellow:after {
+      background-color: hsla(60, 100%, 50%, 1);
+    }
+    &.green:after {
+      background-color: hsla(120, 100%, 50%, 1);
+    }
+    &.blue:after {
+      background-color: hsla(240, 100%, 50%, 1);
+    }
+    &.violet:after {
+      background-color: hsla(274, 100%, 50%, 1);
+    }
+    &.grey:after {
+      background-color: hsla(0, 0%, 50%, 1);
+    }
+    &.white:after {
+      background-color: hsla(0, 100%, 100%, 1);
+    }
+    &.gold:after {
+      background-color: hsla(46, 65%, 52%, 1);
+    }
+    &.silver:after {
+      background-color: hsla(0, 0%, 75%, 1);
+    }
+  }
+}

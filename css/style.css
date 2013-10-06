@@ -1,0 +1,67 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.resistor {
+  font-size: 2em;
+}
+.resistor > * {
+  margin-right: -0.3em;
+  display: inline-block;
+  background-color: #e5d8c2;
+  height: 3em;
+  width: 2em;
+}
+.resistor .left,
+.resistor .right {
+  border-radius: 10px;
+}
+.resistor .band {
+  position: relative;
+  width: 1.2em;
+  height: 2.2em;
+  margin-bottom: .4em;
+}
+.resistor .band:after {
+  content: ' ';
+  position: absolute;
+  left: .3em;
+  width: 0.5em;
+  height: 2.2em;
+}
+.resistor .band.black:after {
+  background-color: #000000;
+}
+.resistor .band.brown:after {
+  background-color: #944a00;
+}
+.resistor .band.red:after {
+  background-color: #ff0000;
+}
+.resistor .band.orange:after {
+  background-color: #ff8000;
+}
+.resistor .band.yellow:after {
+  background-color: #ffff00;
+}
+.resistor .band.green:after {
+  background-color: #00ff00;
+}
+.resistor .band.blue:after {
+  background-color: #0000ff;
+}
+.resistor .band.violet:after {
+  background-color: #9000ff;
+}
+.resistor .band.grey:after {
+  background-color: #808080;
+}
+.resistor .band.white:after {
+  background-color: #ffffff;
+}
+.resistor .band.gold:after {
+  background-color: #d4af35;
+}
+.resistor .band.silver:after {
+  background-color: #bfbfbf;
+}

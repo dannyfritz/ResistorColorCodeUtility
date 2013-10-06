@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <title>Resistor Color Code Utility - CodePen</title>
+
+  <link rel='stylesheet prefetch' href='http://yui.yahooapis.com/pure/0.3.0/pure-min.css'>
+
+    <link rel="stylesheet" href="css/style.css" media="screen" type="text/css" />
+
+</head>
+
+<body>
+
+  <!-- TEMPLATES -->
+<script type="text/html" id="resistor">
+  <div class="resistor">
+    <div class="left"></div>
+    <!-- ko template: { name: 'resistor-band', foreach: bands } --><!-- /ko -->
+    <div class="right"></div>
+  </div>
+</script>
+<script type="text/html" id="resistor-band">
+  <!-- ko with: value -->
+  <div class="band" data-bind="css: {
+    black: index === 0,
+    brown: index === 1,
+    red: index === 2,
+    orange: index === 3,
+    yellow: index === 4,
+    green: index === 5,
+    blue: index === 6,
+    violet: index === 7,
+    grey: index === 8,
+    white: index === 9,
+    gold: index === 10,
+    silver: index === 11 
+  }"></div>
+  <!-- /ko -->
+</script>
+
+<script type="text/html" id="band-selector">
+  <!-- ko template: { name: 'band-selector-band', foreach: bands } --><!-- /ko -->
+</script>
+<script type="text/html" id="band-selector-band">
+  <select data-bind="value: value, options: options, optionsText: function(option){return option.text}"></select>
+</script>
+
+<script type="text/html" id="resistor-value">
+  <input data-bind="value: calculateResistance" />
+</script>
+
+<!-- HTML ENTRYPOINTS -->
+<div data-bind="template: {name: 'resistor'}"></div>
+<div data-bind="template: {name: 'band-selector'}"></div>
+<div data-bind="template: {name: 'resistor-value'}"></div>
+
+<!-- SCRIPTS -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/knockout/2.3.0/knockout-min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/lodash.js/2.2.1/lodash.min.js"></script>
+
+  <script src='http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js'></script>
+
+  <script src="js/index.js"></script>
+
+</body>
+
+</html>
